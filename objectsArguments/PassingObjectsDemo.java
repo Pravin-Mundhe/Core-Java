@@ -9,7 +9,7 @@ public class PassingObjectsDemo
     {
         System.out.println(obj.n);
     }
-    boolean equals(PassingObjectsDemo obj1, PassingObjectsDemo obj2)
+    static boolean equals(PassingObjectsDemo obj1, PassingObjectsDemo obj2)
     {
         if(obj1.n == obj2.n)
             return true;
@@ -21,11 +21,9 @@ public class PassingObjectsDemo
         PassingObjectsDemo s2 = new PassingObjectsDemo(20);
         s1.display(s1);
         s2.display(s2);
-        if(s1.equals(s1, s2))
+        if(equals(s1, s2))
             System.out.println("Equal");
         else
             System.out.println("Not Equal");
     }
-
 }
-
